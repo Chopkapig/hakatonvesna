@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WorkTime Sync UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <input class="theme-toggle-input" id="theme-toggle" type="checkbox" aria-label="Переключить тему">
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand-mark">◌</span>
+        <span>WorkTime Sync</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav-item active" href="#"><span>⌂</span>Профиль</a>
+        <a class="nav-item" href="#"><span>⌁</span>Аналитика</a>
+        <a class="nav-item" href="#"><span>☷</span>Сотрудники</a>
+        <a class="nav-item" href="#"><span>□</span>Задачи</a>
+        <a class="nav-item" href="#"><span>△</span>Риски и ошибки</a>
+        <a class="nav-item" href="#"><span>◎</span>Рекомендации</a>
+        <a class="nav-item" href="#"><span>⚙</span>Настройки</a>
+      </nav>
+
+      <section class="upload-panel" aria-label="Импорт данных">
+        <h2>Импорт данных</h2>
+        <div class="drop-zone">
+          <span class="drop-icon">⇧</span>
+          <p>Перетащите файл или</p>
+          <button class="btn btn-accent btn-small">Загрузить</button>
+          <small>Поддерживаются .xlsx, .csv</small>
+        </div>
+      </section>
+
+      <section class="help-panel">
+        <h2>Нужна помощь?</h2>
+        <p>AI-ассистент готов помочь</p>
+        <button class="btn btn-accent">Открыть чат</button>
+      </section>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <h1>Добрый день, Иван!</h1>
+          <p>Обзор системы на 23 мая 2026, 10:30</p>
+        </div>
+        <div class="topbar-actions">
+          <label class="theme-toggle" for="theme-toggle">
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+            </span>
+            <span class="toggle-label">Тема</span>
+          </label>
+          <div class="user-chip">
+            <span class="avatar"></span>
+            <strong>Иванов И.И.</strong>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="metrics-grid" aria-label="Основные показатели">
+        <article class="metric-card">
+          <span class="metric-icon info">♙</span>
+          <div>
+            <p>Всего сотрудников</p>
+            <strong>250</strong>
+            <small class="positive">+12 за месяц</small>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon success">♙</span>
+          <div>
+            <p>Активные сотрудники</p>
+            <strong>230</strong>
+            <small class="positive">92% от общего</small>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon risk">!</span>
+          <div>
+            <p>Просроченные задачи</p>
+            <strong>16</strong>
+            <small class="negative">+3 за неделю</small>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon accent">◷</span>
+          <div>
+            <p>Средняя загрузка</p>
+            <strong>76%</strong>
+            <small>Норма</small>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon success">✓</span>
+          <div>
+            <p>Результативность</p>
+            <strong>74.6</strong>
+            <small class="positive">+4.2 за месяц</small>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon error">!</span>
+          <div>
+            <p>Ошибки в данных</p>
+            <strong>7</strong>
+            <small class="negative">+2 за неделю</small>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel profile-panel">
+          <div class="profile-photo" aria-hidden="true"></div>
+          <div class="profile-content">
+            <h2>Иванов Иван Иванович</h2>
+            <p>Администратор</p>
+            <p>Отдел разработки</p>
+            <p>Стаж: 2 года 4 мес.</p>
+            <span class="badge badge-success">Активен</span>
+          </div>
+        </article>
+
+        <article class="panel updates-panel">
+          <div class="section-heading">
+            <span class="heading-icon accent">↻</span>
+            <h2>Последние обновления</h2>
+          </div>
+          <div class="update-row">
+            <time>10:30</time>
+            <span>Данные синхронизированы из системы учета</span>
+            <span class="badge badge-success">Успешно</span>
+          </div>
+          <div class="update-row">
+            <time>10:25</time>
+            <span>Найдено 7 ошибок в данных</span>
+            <span class="badge badge-error">Ошибка</span>
+          </div>
+          <div class="update-row">
+            <time>10:20</time>
+            <span>Обновлены графики трудозатрат</span>
+            <span class="badge badge-success">Успешно</span>
+          </div>
+          <div class="update-row">
+            <time>10:15</time>
+            <span>Добавлен новый сотрудник: Алексеев Д.С.</span>
+            <span class="badge badge-info">Информация</span>
+          </div>
+        </article>
+
+        <article class="panel assistant-panel">
+          <div class="section-heading">
+            <span class="heading-icon accent">✦</span>
+            <h2>AI-ассистент</h2>
+          </div>
+          <label>
+            <span>Быстрый вопрос</span>
+            <select>
+              <option>Что происходит с моим графиком?</option>
+              <option>Кто сейчас в зоне риска?</option>
+              <option>Какие задачи просрочены?</option>
+            </select>
+          </label>
+          <label>
+            <span>Ваш вопрос</span>
+            <textarea>Что происходит с моим графиком?</textarea>
+          </label>
+          <button class="btn btn-accent">Получить рекомендацию</button>
+        </article>
+
+        <article class="panel calendar-panel">
+          <div class="section-heading">
+            <span class="heading-icon accent">▣</span>
+            <h2>Календарь событий</h2>
+          </div>
+          <div class="calendar-layout">
+            <div class="calendar">
+              <div class="calendar-head">
+                <button class="icon-button" aria-label="Предыдущий месяц">‹</button>
+                <strong>Май 2024</strong>
+                <button class="icon-button" aria-label="Следующий месяц">›</button>
+              </div>
+              <div class="weekdays">
+                <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+              </div>
+              <div class="days">
+                <span class="muted">29</span><span class="muted">30</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+                <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+                <span>20</span><span>21</span><span>22</span><span class="selected">23</span><span>24</span><span>25</span><span>26</span>
+                <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="muted">1</span><span class="muted">2</span>
+              </div>
+            </div>
+            <ul class="legend">
+              <li><span class="dot info"></span>Встреча команды</li>
+              <li><span class="dot error"></span>Дедлайн проекта</li>
+              <li><span class="dot risk"></span>Отпуск</li>
+              <li><span class="dot success"></span>Больничный</li>
+              <li><span class="dot info-dark"></span>Командировка</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="system-panel" aria-label="UI Kit">
+        <div class="kit-header">
+          <div>
+            <h2>WorkTime Sync UI Kit</h2>
+            <p>Цветовые темы, типографика, кнопки, бейджи и карточки для проекта.</p>
+          </div>
+          <div class="button-row compact">
+            <button class="btn btn-accent">Обновить данные</button>
+            <button class="btn btn-secondary">Экспорт</button>
+            <button class="btn btn-secondary">Подробнее</button>
+          </div>
+        </div>
+
+        <div class="kit-grid">
+          <article class="panel">
+            <h3>Цветовая палитра</h3>
+            <div class="swatches">
+              <span style="--swatch: var(--bg);">Фон</span>
+              <span style="--swatch: var(--button-bg);">Фон кнопок</span>
+              <span style="--swatch: var(--card);">Карточка</span>
+              <span style="--swatch: var(--border);">Граница</span>
+              <span style="--swatch: var(--accent);">Акцент</span>
+              <span style="--swatch: var(--info);">Информация</span>
+              <span style="--swatch: var(--success);">Успех</span>
+              <span style="--swatch: var(--warning);">Предупреждение</span>
+              <span style="--swatch: var(--risk);">Риск</span>
+              <span style="--swatch: var(--error);">Ошибка</span>
+              <span style="--swatch: var(--chart);">График</span>
+            </div>
+          </article>
+
+          <article class="panel typography-panel">
+            <h3>Типографика</h3>
+            <div class="type-row"><strong>H1</strong><span>Roboto</span><small>32px / Bold</small></div>
+            <div class="type-row"><strong>H2</strong><span>Roboto</span><small>24px / SemiBold</small></div>
+            <div class="type-row"><strong>H3</strong><span>Roboto</span><small>18px / SemiBold</small></div>
+            <div class="type-row"><strong>Body</strong><span>Roboto</span><small>14px / Regular</small></div>
+            <div class="type-row"><strong>Caption</strong><span>Roboto</span><small>12px / Regular</small></div>
+          </article>
+
+          <article class="panel">
+            <h3>Статусы и бейджи</h3>
+            <div class="badge-cloud">
+              <span class="badge badge-success">● В работе</span>
+              <span class="badge badge-success">● Успешно</span>
+              <span class="badge badge-risk">● Просрочено</span>
+              <span class="badge badge-error">● Ошибка</span>
+              <span class="badge badge-info">◇ Низкий риск</span>
+              <span class="badge badge-warning">◇ Средний риск</span>
+              <span class="badge badge-error">◇ Срочный риск</span>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Кнопки</h3>
+            <div class="button-row">
+              <button class="btn btn-accent">Обновить данные</button>
+              <button class="btn btn-secondary">Экспорт</button>
+              <button class="btn btn-secondary">Подробнее</button>
+              <button class="btn btn-success">Сохранить</button>
+              <button class="btn btn-warning">Проверить</button>
+              <button class="btn btn-error">Удалить</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
